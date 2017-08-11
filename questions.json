@@ -1,9 +1,9 @@
 { "questions": [{
-    "question": "What command do you use to create an Ember project within an existing folder?",
+    "qcontent": "What command do you use to create an Ember project within an existing folder?",
     "author": "Noobster",
     "notes": "Please halp me."
   }, {
-    "question": "Which came first, the chicken or the egg?",
+    "qcontent": "Which came first, the chicken or the egg?",
     "author": "Noobutt",
     "notes": "I would really like to know."
   }]

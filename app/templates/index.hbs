@@ -2,5 +2,11 @@
 
 <h3>An excellent resource for knowledge and information.</h3>
 
+<ul>
+  {{#each model as |question|}}
+    <li>{{question.qcontent}} by {{question.author}}</li>
+	{{/each}}
+</ul>
+
 {{#link-to 'about'}}About |{{/link-to}}
 {{#link-to 'contact'}}Contact Us{{/link-to}}
