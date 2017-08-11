@@ -5,7 +5,7 @@
 ## Planning
 
 1. Configuration/Dependencies
-  * Bower components which include Ember,jQuery, Ember Data, QUnit and Bootstrap, to be installed in the bower-components directory.
+  * Bower components which include Ember, jQuery, Ember Data, QUnit and Bootstrap, to be installed in the bower-components directory.
   * Node.js modules for operation.
   * It could include a short description of what each does for you
 
