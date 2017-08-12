@@ -4,7 +4,7 @@
 
 <ul style="list-style-type:square">
   {{#each model as |question|}}
-    <li>{{question.qcontent}} by {{question.author}}</li>
+    <li>{{question-tile question=question}}</li>
 	{{/each}}
 </ul>
 
