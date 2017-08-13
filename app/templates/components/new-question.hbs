@@ -1,0 +1,25 @@
+{{#if addNewQuestion}}
+  <h1>Post a New Question</h1>
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="qcontent">Your Question</label>
+        {{input value=qcontent id="qcontent"}}
+      </div>
+
+      <div class="form-group">
+        <label for="author">Your Username</label>
+        {{input value=author id="author"}}
+      </div>
+
+      <div class="form-group">
+        <label for="notes">Any Additional Notes You Might Want To Add</label>
+        {{input value=notes id="notes"}}
+      </div>
+
+      <button {{action 'saveQuestion'}}>Post This Question</button>
+    </form>
+  </div>
+{{else}}
+  <button {{action 'questionFormShow'}}>Ask a New Question</button>
+{{/if}}
