@@ -1,8 +1,9 @@
 <li>
-  {{quesiton.qcontent}} asked by {{question.author}}
+  {{question.qcontent}} asked by {{question.author}}
   {{#if isNotesShowing}}
     <p>{{question.notes}} <button {{action 'notesHide' question.notes}}>Hide Notes</button></p>
   {{else}}
     <button {{action 'notesShow'}}> Show Notes</button>
   {{/if}}
+  <button {{action 'delete' question}}>Delete Question</button>
 </li>
