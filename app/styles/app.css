@@ -1,0 +1,22 @@
+body {
+  background: url('https://images8.alphacoders.com/559/559128.jpg') no-repeat top right fixed;
+  color: yellow;
+}
+
+input, textarea {
+  background-color: black;
+}
+
+button {
+  color: black;
+}
+
+a {
+  font-size: 150%;
+  font-weight: bold;
+  color: yellow;
+}
+
+.welcome {
+  text-align: center;
+}

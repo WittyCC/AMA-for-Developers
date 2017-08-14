@@ -1,6 +1,6 @@
 <h1>WELCOME TO AMA FOR DEVELOPERS</h1>
 
-<h3>An excellent resource for knowledge and information.</h3>
+<h3 class="welcome">An excellent resource for knowledge and information.</h3>
 
 <ul style="list-style-type:square">
   {{#each model.questions as |question|}}
@@ -14,8 +14,6 @@
 
 <ul>
   {{#each model.answers as |answer|}}
-    <li>{{answer.acontent}} by {{answer.author}}</li>
+    <li>{{answer.acontent}} by {{answer.username}}</li>
   {{/each}}
 </ul>
-
-{{#link-to 'about'}}About{{/link-to}} | {{#link-to 'contact'}}Contact Us{{/link-to}}

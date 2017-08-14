@@ -1,1 +1,15 @@
-{{outlet}}
+<br>
+<div class="container">
+  <header>
+    <ul class="nav navbar-nav">
+      {{#nav-link-to 'index'}}HOME{{/nav-link-to}}
+      {{#nav-link-to 'about'}}ABOUT{{/nav-link-to}}
+      {{#nav-link-to 'contact'}}CONTACT{{/nav-link-to}}
+    </ul>
+  </header>
+<br>
+  {{outlet}}
+<hr>
+  <footer>
+  </footer>
+</div>
