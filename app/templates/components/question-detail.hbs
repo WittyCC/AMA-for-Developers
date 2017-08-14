@@ -1,4 +1,11 @@
 Additional Notes for This Topic:
 {{question.notes}}
 
+<h3>Responses:</h3>
+<ul>
+  {{#each question.answers as |answer|}}
+    {{answer-tile answer=answer destroyAnswer="destroyAnswer"}}
+  {{/each}}
+</ul>
+
 <button {{action 'delete' question}}>Delete</button>

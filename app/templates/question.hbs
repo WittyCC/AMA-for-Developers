@@ -1,5 +1,9 @@
+{{#link-to 'index'}}Home{{/link-to}}
+
 <h2>{{model.qcontent}}</h2>
 <h3>By {{model.author}}</h3>
-{{question-detail question=model}}
+{{question-detail question=model destroyQuestion="destroyQuestion" destroyAnswer="destroyAnswer"}}
 
 {{update-question question=model update="update"}}
+
+{{new-answer saveAnswer="saveAnswer" question=model}}

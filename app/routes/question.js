@@ -17,7 +17,27 @@ export default Ember.Route.extend({
     },
 
     destroyQuestion(question) {
-      question.destroyRecord();
+      var review_deletions = question.get('answers').map(function(answer) {
+        return answer.destroyRecord();
+      });
+      Ember.RSVP.all(review_deletions).then(function() {
+        return question.destroyRecord();
+      });
+      this.transitionTo('index');
+    },
+
+    saveAnswer(params) {
+      var newAnswer = this.store.createRecord('answer', params);
+      var question = params.question;
+      question.get('answers').addObject(newAnswer);
+      newAnswer.save().then(function() {
+        return question.save();
+      });
+      this.transitionTo('question', question);
+    },
+
+    destroyAnswer(answer) {
+      answer.destroyRecord();
       this.transitionTo('index');
     }
   }

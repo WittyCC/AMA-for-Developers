@@ -3,11 +3,19 @@
 <h3>An excellent resource for knowledge and information.</h3>
 
 <ul style="list-style-type:square">
-  {{#each model as |question|}}
+  {{#each model.questions as |question|}}
     <li>{{question-tile question=question}}</li>
 	{{/each}}
 </ul>
 
 {{new-question saveQuestion="saveQuestion"}}
+
+<h4>Recently Posted Answers</h4>
+
+<ul>
+  {{#each model.answers as |answer|}}
+    <li>{{answer.acontent}} by {{answer.author}}</li>
+  {{/each}}
+</ul>
 
 {{#link-to 'about'}}About{{/link-to}} | {{#link-to 'contact'}}Contact Us{{/link-to}}
