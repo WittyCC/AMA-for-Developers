@@ -1,10 +1,8 @@
 <li>
-  {{question.qcontent}} asked by {{question.author}}
+  {{#link-to 'question' question.id}}{{question.qcontent}} asked by {{question.author}} {{/link-to}}
   {{#if isNotesShowing}}
     <p>{{question.notes}} <button {{action 'notesHide' question.notes}}>Hide Notes</button></p>
   {{else}}
     <button {{action 'notesShow'}}> Show Notes</button>
   {{/if}}
-  {{update-question question=question update="update"}}
-  <button {{action 'delete' question}}>Delete Question</button>
 </li>
